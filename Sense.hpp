@@ -107,7 +107,7 @@ struct Sense {
                     Vector2D head = headPositionW2S;
                     float height = head.y - foot.y;
                     float width = height / 2;
-                    glColor3f(EnemyBoxColor.x, EnemyBoxColor.y, EnemyBoxColor.z);
+                    glColor3f(enemyBoxColor.x, enemyBoxColor.y, enemyBoxColor.z);
                     glLineWidth(1.0f);
                     glBegin(GL_LINE_LOOP);
                     glVertex2f(foot.x - width/2, foot.y);
@@ -291,8 +291,8 @@ struct Sense {
 
                 ImVec2 center(single.x, single.y);
                 int radius = 3;
-                Canvas->AddCircleFilled(center, radius, ImColor(ImVec4(0.99, 0, 0.99, 0.69)));
-                Canvas->AddCircle(center, radius + 1, p->isVisible
+                canvas->AddCircleFilled(center, radius, ImColor(ImVec4(0.99, 0, 0.99, 0.69)));
+                canvas->AddCircle(center, radius + 1, p->isVisible
                   ? ImColor(ImVec4(0.99, 0.99, 0, 0.69))
                   : ImColor(ImVec4(0, 0, 0, 0.75)));
 
