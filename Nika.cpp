@@ -78,7 +78,7 @@ int main(int argc, char* argv[]) {
     if (getuid()) { std::cout << "RUN AS ROOT!\n"; return -1; }
     printf("Offsets.hpp %s\n", OFF_GAME_VERSION);
     //if (util::isOutdated()) { std::cout << "Please update Offsets.hpp and run install.sh from path/to/extracted/repository!\n"; return -1; }
-    if (util::isOutdated()) { std::cout << "Press ENTER to continue\n"; system("read"); }
+    if (util::isOutdated()) { std::cout << "Press ENTER to continue\n"; getchar(); }
 
     system("mount -o remount,rw,hidepid=0 /proc");
     while (mem::getPid() == 0) {
